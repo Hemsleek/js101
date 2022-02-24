@@ -6,3 +6,50 @@ body {
   padding: 0;
   margin: 0;
 }
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 10px;
+}
+.wrapper {
+  position: relative;
+}
+.drop-down {
+  width: fit-content;
+  background-color: dodgerblue;
+  user-select: none;
+  cursor: pointer;
+  padding: 0.2rem;
+  color: #fff;
+  border-radius: 2px;
+  font-weight: 700;
+}
+.wrapper:hover .drop-down {
+  background-color: green;
+}
+
+.wrapper.active .drop-downs {
+  display: flex;
+}
+.drop-downs {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+.drop-downs span {
+  user-select: none;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+.drop-downs span:hover {
+  background-color: yellow;
+}
