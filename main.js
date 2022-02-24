@@ -5,7 +5,6 @@ const dropDownsEl = document.querySelectorAll(".drop-downs span")
 
 
 
-console.log(dropDownsEl)
 const dropDownsArr = Array.from(dropDownsEl)
 console.log(dropDownsArr)
 
@@ -13,6 +12,8 @@ for (let i = 0; i < dropDownsArr.length; i++) {
     const optionText = dropDownsEl[i].textContent
     dropDownsEl[i].addEventListener('click', () => {
         dropDownEl.textContent = optionText
+        wrapperEl.classList.remove('active')
+
     })
 }
 
